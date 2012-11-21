@@ -1,4 +1,4 @@
-package com.freedom.form;
+package com.freedom.h2o.struts.form;
 
 import org.apache.struts.action.ActionForm;
 

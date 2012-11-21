@@ -1,4 +1,4 @@
-package com.freedom.action;
+package com.freedom.h2o.struts.action;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,7 +12,7 @@ import org.apache.struts.action.ActionForward;
 
 import org.apache.struts.action.ActionMapping;
 
-import com.freedom.form.HelloWorldForm;
+import com.freedom.h2o.struts.form.HelloWorldForm;
 
 public class HelloWorldAction extends Action {
 
