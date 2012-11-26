@@ -3,33 +3,27 @@
 <!DOCTYPE struts-config PUBLIC
   "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
   "http://struts.apache.org/dtds/struts-config_1_3.dtd">
-   
+
 <struts-config>
-   
-  <!-- Form Beans Configuration -->
-  <form-beans>
-      <form-bean name="searchForm"
-                   type="com.freedom.h2o.struts.SearchForm"/>
-  </form-beans>
-   
-  <!-- Global Forwards Configuration -->
-  <global-forwards>
-    <forward name="search" path="/search.jsp"/>
-  </global-forwards>
-   
-  <!-- Action Mappings Configuration -->
-  <action-mappings>
-    <action path="/search"
-            type="com.freedom.h2o.struts.action.searchAction"
-            name="searchForm"
-            scope="request"
-            validate="true"
-            input="/search.jsp">
-    </action>
-  </action-mappings>
-   
-  <!-- Message Resources Configuration -->
-  <message-resources
-        parameter="huntH2O.MessageResources"/>
-   
+
+	<!-- Form Beans Configuration -->
+	<form-beans>
+		<form-bean name="searchForm" type="com.freedom.h2o.struts.form.SearchForm" />
+	</form-beans>
+
+	<!-- Global Forwards Configuration -->
+	<global-forwards>
+		<forward name="search" path="/jsp/search.jsp" />
+	</global-forwards>
+
+	<!-- Action Mappings Configuration -->
+	<action-mappings>
+		<action path="/search" type="com.freedom.h2o.struts.action.SearchAction"
+			name="searchForm" scope="request" validate="true" input="/jsp/search.jsp">
+		</action>
+	</action-mappings>
+
+	<!-- Message Resources Configuration -->
+	<message-resources parameter="huntH2O.MessageResources" />
+
 </struts-config>
