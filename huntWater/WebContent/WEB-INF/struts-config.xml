@@ -16,7 +16,7 @@
     
     <action-mappings>
         <action path="/helloWorld" type="com.freedom.h2o.struts.action.HelloWorldAction" name="helloWorldForm">
-        	<forward name="success" path="/helloWorld.jsp" />
+        	<forward name="success" path="/jsp/helloWorld.jsp" />
         </action>    
     </action-mappings>
 
