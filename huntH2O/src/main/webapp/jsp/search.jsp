@@ -1,6 +1,7 @@
 <%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
 <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <%@ taglib prefix="logic" uri="http://struts.apache.org/tags-logic"  %>
+
    
 <html>
 <head>
@@ -18,12 +19,17 @@ ABC, Inc. Human Resources Portal - Employee Search
 <html:form action="search">
    
 <table>
-
+ <tr>
+<td><html:text property="fountainName"/></td>
+</tr>
 <tr>
 <td></td>
 <td>-- or --</td>
 </tr>
 
+ <tr>
+<td><html:text property="ssNum"/> (xxx-xx-xxxx)</td>
+</tr>
 <tr>
 <td></td>
 <td><html:submit/></td>

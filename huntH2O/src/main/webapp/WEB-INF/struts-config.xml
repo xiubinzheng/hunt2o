@@ -24,6 +24,6 @@
 	</action-mappings>
 
 	<!-- Message Resources Configuration -->
-	<message-resources parameter="huntH2O.MessageResources" />
+	<message-resources parameter="MessageResources.properties" />
 
 </struts-config>
