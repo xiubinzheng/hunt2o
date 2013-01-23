@@ -24,7 +24,7 @@ public class SearchAction extends Action {
 		SearchForm searchForm = (SearchForm) form;
 
 		// Perform employee search based on the criteria entered.
-		String foutainName = searchForm.getName();
+		String foutainName = searchForm.getFountainName();
 		if (foutainName != null && foutainName.trim().length() > 0) {
 			results = service.searchByfountainName(foutainName);
 		}

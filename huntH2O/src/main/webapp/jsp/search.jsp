@@ -27,9 +27,7 @@ ABC, Inc. Human Resources Portal - Employee Search
 <td>-- or --</td>
 </tr>
 
- <tr>
-<td><html:text property="ssNum"/> (xxx-xx-xxxx)</td>
-</tr>
+
 <tr>
 <td></td>
 <td><html:submit/></td>
