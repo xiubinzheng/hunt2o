@@ -10,8 +10,8 @@
 <font size="+1">ABC, Inc. Human Resources Portal</font><br>
 <hr width="100%">
    
-&#149; Add an Employee<br>
-&#149; <html:link forward="search">Search for Employees</html:link><br>
+&#149; Add a water fountain<br>
+&#149; <html:link forward="search">Search for water fountain</html:link><br>
    
 </body>
 </html>
