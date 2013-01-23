@@ -20,6 +20,7 @@ public class SearchForm extends ActionForm {
 	private String address = null;
 	private String cityTown = null;
 	private String zipCode = null;
+	private String fountainName = null;
 	private List<Fountain> results = null;
 
 	public void setName(String name) {
@@ -105,6 +106,14 @@ public class SearchForm extends ActionForm {
 
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
+	}
+
+	public String getFountainName() {
+		return fountainName;
+	}
+
+	public void setFountainName(String fountainName) {
+		this.fountainName = fountainName;
 	}
 
 }
