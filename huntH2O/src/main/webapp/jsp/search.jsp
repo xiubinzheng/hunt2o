@@ -5,14 +5,13 @@
    
 <html>
 <head>
-<title>Find any water fountain nearby you!!! :)</title>
+<title>Find any drinking fountain near you!!! :)</title>
 </head>
 <body>
    
 <font size="+1">
 HuntH2O Inc.
 </font><br>
-<hr width="100%" noshade="true">
    
 <html:errors/>
    
@@ -23,14 +22,13 @@ HuntH2O Inc.
 <td><html:text property="fountainName"/></td>
 </tr>
 <tr>
-<td></td>
-<td>-- or --</td>
+
 </tr>
 
 
 <tr>
-<td></td>
-<td><html:submit/></td>
+
+<td align="justify"><html:submit value ="search"/></td>
 </tr>
 </table>
    
@@ -41,7 +39,7 @@ HuntH2O Inc.
 <hr width="100%" size="1" noshade="true">
 <bean:size id="size" name="searchForm" property="results"/>
 <logic:equal name="size" value="0">
-<center><font color="red">No Employees Found</b></font></center>
+<center><font color="red">No drinking fountain Found</b></font></center>
 </logic:equal>
    
 </logic:present>
