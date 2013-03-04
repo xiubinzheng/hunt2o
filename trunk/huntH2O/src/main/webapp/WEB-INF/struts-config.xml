@@ -24,6 +24,6 @@
 	</action-mappings>
 
 	<!-- Message Resources Configuration -->
-	<message-resources parameter="MessageResources.properties" />
+	<message-resources parameter="MessageResources" />
 
 </struts-config>
