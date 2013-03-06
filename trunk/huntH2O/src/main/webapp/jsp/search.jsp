@@ -8,28 +8,33 @@
 <title>Find any drinking fountain near you!!! :)</title>
 </head>
 <body>
-   
-<font size="+1">
-HuntH2O Inc.
-</font><br>
-   
+ <table>
+	<tr> 
+		<td>
+			<input type="button" value="Find" /> 
+		</td>	
+		<td>
+				<font size="+1" color="blue">
+				or
+				</font>
+		</td>
+		<td>	
+			<input type="button" value="add"/> 
+		</td>	  
+	</tr>
+ </table>  
 <html:errors/>
    
 <html:form action="search">
    
 <table>
- <tr>
-<td><html:text property="fountainName"/></td>
-</tr>
-<tr>
-
-</tr>
-
-
-<tr>
-
-<td align="justify"><html:submit value ="search"/></td>
-</tr>
+	<tr>
+	<td><html:text property="fountainName"/></td>
+	</tr>
+	
+	<tr>
+	<td ><html:submit value ="search"/></td>
+	</tr>
 </table>
    
 </html:form>
