@@ -1,17 +1,16 @@
-<%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
-<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
-<%@ taglib prefix="logic" uri="http://struts.apache.org/tags-logic"  %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+   
 <html>
 <head>
-<title>Don't be thirsty anymore</title>
+<title>ABC, Inc. Human Resources Portal</title>
 </head>
 <body>
    
 <font size="+1">ABC, Inc. Human Resources Portal</font><br>
-
+<hr width="100%" noshade="true">
    
-&#149; Add a water fountain<br>
-&#149; <html:link forward="search">Search for water fountain</html:link><br>
+&#149; Add an Employee<br>
+&#149; <html:link forward="search">Search for Employees</html:link><br>
    
 </body>
 </html>
