@@ -19,7 +19,8 @@
 	<!-- Action Mappings Configuration -->
 	<action-mappings>
 		<action path="/search" type="com.freedom.h2o.struts.action.SearchAction"
-			name="searchForm" scope="request" validate="true" input="/jsp/search.jsp">
+			name="searchForm" scope="request"  input="/jsp/search.jsp">
+			<forward name="down" path="/jsp/search.jsp" />
 		</action>
 	</action-mappings>
 
