@@ -27,10 +27,10 @@ public class Fountain implements Serializable {
 	public Fountain(Integer waterRating, String fountainName,
 			String Description, Date createdDate) {
 
-		waterRating = this.waterRating;
-		fountainName = this.fountainName;
-		Description = this.Description;
-		createdDate = this.createdDate;
+		 this.waterRating = waterRating; 
+		 this.fountainName = fountainName;
+		 this.Description = Description;
+		 this.createdDate = createdDate;
 	}
 	
 	public String getFountainName()

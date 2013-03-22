@@ -19,16 +19,16 @@ ABC, Inc. Human Resources Portal - Employee Search
    
 <table>
 <tr>
-<td align="right"><bean:message key="label.search.name"/>:</td>
-<td><html:text property="name"/></td>
+<td align="right"><bean:message key="label.search.fountainName"/>:</td>
+<td><html:text property="fountainName"/></td>
 </tr>
 <tr>
 <td></td>
 <td>-- or --</td>
 </tr>
 <tr>
-<td align="right"><bean:message key="label.search.ssNum"/>:</td>
-<td><html:text property="ssNum"/> (xxx-xx-xxxx)</td>
+<td align="right"><bean:message key="label.search.description"/>:</td>
+<td><html:text property="description"/> (xxx-xx-xxxx)</td>
 </tr>
 <tr>
 <td></td>
@@ -50,13 +50,13 @@ ABC, Inc. Human Resources Portal - Employee Search
 <logic:greaterThan name="size" value="0">
 <table border="1">
 <tr>
-<th>Name</th>
-<th>Social Security Number</th>
+<th>Fountain Name</th>
+<th>Description</th>
 </tr>
 <logic:iterate id="result" name="searchForm" property="results">
 <tr>
-<td><bean:write name="result" property="name"/></td>
-<td><bean:write name="result" property="ssNum"/></td>
+<td><bean:write name="result" property="fountainName"/></td>
+<td><bean:write name="result" property="description"/></td>
 </tr>
 </logic:iterate>
 </table>
