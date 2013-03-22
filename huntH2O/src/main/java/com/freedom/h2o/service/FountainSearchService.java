@@ -21,7 +21,7 @@ public class FountainSearchService {
 
 		for (int i = 0; i < fountains.length; i++) {
 			if (fountains[i].getFountainName().toUpperCase()
-					.indexOf(fountainName.toUpperCase()) != 1) {
+					.indexOf(fountainName.toUpperCase()) != -1) {
 				resultList.add(fountains[i]);
 			}
 		}
