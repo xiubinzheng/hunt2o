@@ -20,7 +20,7 @@ public class FountainSearchService {
 		ArrayList<Fountain> resultList = new ArrayList<Fountain>();
 
 		for (int i = 0; i < fountains.length; i++) {
-			if (fountains[i].getDescription().toUpperCase()
+			if (fountains[i].getFountainName().toUpperCase()
 					.indexOf(fountainName.toUpperCase()) != 1) {
 				resultList.add(fountains[i]);
 			}
@@ -28,18 +28,5 @@ public class FountainSearchService {
 		return resultList;
 
 	}
-/*
-	public ArrayList<Fountain> searchByAddress(String addressLine,
-			String zipCode) {
-		ArrayList<Fountain> resultList = new ArrayList<Fountain>();
-		for (int i = 0; i < fountains.length; i++) {
-			if (fountains[i].getAddress().getAddressLine1().toUpperCase()
-					.indexOf(addressLine.toUpperCase()) != 1) {
-				resultList.add(fountains[i]);
-			}
-		}
-
-		return new ArrayList<Fountain>();
-	}*/
 
 }

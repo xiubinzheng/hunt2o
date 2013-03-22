@@ -11,25 +11,11 @@ import org.apache.struts.action.ActionMessage;
    
 public class SearchForm extends ActionForm
 {
-  private String name = null;
-  private String ssNum = null;
+  private String fountainName = null;
+  private String description = null;
   private List results = null;
    
-  public void setName(String name) {
-    this.name = name;
-  }
-   
-  public String getName() {
-    return name;
-  }
-   
-  public void setSsNum(String ssNum) {
-    this.ssNum = ssNum;
-  }
-   
-  public String getSsNum() {
-    return ssNum;
-  }
+  
    
   public void setResults(List results) {
     this.results = results;
@@ -38,14 +24,34 @@ public class SearchForm extends ActionForm
   public List getResults() {
     return results;
   }
+  
+  public void setFountainName(String fountainName)
+  {
+	  this.fountainName = fountainName;
+  }
+  
+  public String getFountainName()
+  {
+	  return fountainName;
+  }
+  
+  public void setDescription(String description)
+  {
+	  this.description = description;
+  }
+  
+  public String getDescription()
+  {
+	  return description;
+  }
    
   // Reset form fields.
    
   public void reset(ActionMapping mapping, HttpServletRequest request)
   {
-    name = null;
-    ssNum = null;
-     results = null;
+	  fountainName = null;
+	  description  = null;
+	  results = null;
   }
    
   // Validate form data.
@@ -54,32 +60,27 @@ public class SearchForm extends ActionForm
   {
     ActionErrors errors = new ActionErrors();
    
-    boolean nameEntered = false;
-    boolean ssNumEntered = false;
+    boolean fountainNameEntered = false;
+    boolean descriptionEntered = false;
    
     // Determine if name has been entered.
-    if (name != null && name.length() > 0) {
-        nameEntered = true;
+    if (fountainName != null && fountainName.length() > 0) {
+    	fountainNameEntered = true;
     }
    
         // Determine if social security number has been entered.
-    if (ssNum != null && ssNum.length() > 0) {
-      ssNumEntered = true;
+    if (description != null && description.length() > 0) {
+    	descriptionEntered = true;
     }
    
     /* Validate that either name or social security number
        has been entered. */
-    if (!nameEntered && !ssNumEntered) {
+    if (!fountainNameEntered && !descriptionEntered) {
       errors.add(null,
             new ActionMessage("error.search.criteria.missing"));
     }
    
-    /* Validate format of social security number if
-         it has been entered. */
-    if (ssNumEntered && !isValidSsNum(ssNum.trim())) {
-        errors.add("ssNum",
-        new ActionMessage("error.search.ssNum.invalid"));
-    }
+   
    
     return errors;
   }

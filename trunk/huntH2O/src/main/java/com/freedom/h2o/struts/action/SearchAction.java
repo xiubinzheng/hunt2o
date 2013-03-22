@@ -10,6 +10,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.freedom.h2o.service.EmployeeSearchService;
+import com.freedom.h2o.service.FountainSearchService;
 import com.freedom.h2o.struts.form.SearchForm;
    
 public final class SearchAction extends Action
@@ -21,16 +22,18 @@ public final class SearchAction extends Action
      throws Exception
   {
     EmployeeSearchService service = new EmployeeSearchService();
+    FountainSearchService fService = new FountainSearchService(); 
+    
     ArrayList results;
    
     SearchForm searchForm = (SearchForm) form;
    
     // Perform employee search based on the criteria entered.
-    String name = searchForm.getName();
+    String name = searchForm.getFountainName();
        if (name != null && name.trim().length() > 0) {
-      results = service.searchByName(name);
+      results = fService.searchByfountainName(name);
     } else {
-      results = service.searchBySsNum(searchForm.getSsNum().trim());
+      results = null;
     }
    
     // Place search results in SearchForm for access by JSP.
