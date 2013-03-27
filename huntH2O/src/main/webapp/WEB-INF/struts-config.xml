@@ -9,11 +9,13 @@
 	<!-- Form Beans Configuration -->
 	<form-beans>
 		<form-bean name="searchForm" type="com.freedom.h2o.struts.form.SearchForm" />
+		<form-bean name="addFountainForm" type="com.freedom.h2o.struts.form.AddFountainForm" />
 	</form-beans>
 
 	<!-- Global Forwards Configuration -->
 	<global-forwards>
 		<forward name="search" path="/jsp/search.jsp" />
+		<forward name="add" path="/jsp/add_fountain.jsp" />
 	</global-forwards>
 
 	<!-- Action Mappings Configuration -->
@@ -21,6 +23,11 @@
 		<action path="/search" type="com.freedom.h2o.struts.action.SearchAction"
 			name="searchForm" scope="request"  input="/jsp/search.jsp">
 			<forward name="down" path="/jsp/search.jsp" />
+		</action>
+		
+		<action path="/add" type="com.freedom.h2o.struts.action.AddFountainAction"
+			name="addFountainForm" scope="request"  input="/jsp/add_fountain.jsp">
+			<forward name="down" path="/jsp/add_fountain.jsp" />
 		</action>
 	</action-mappings>
 
