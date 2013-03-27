@@ -11,9 +11,10 @@ import org.apache.struts.action.ActionMapping;
 
 import com.freedom.h2o.service.EmployeeSearchService;
 import com.freedom.h2o.service.FountainSearchService;
-import com.freedom.h2o.struts.form.SearchForm;
+import com.freedom.h2o.struts.form.AddFountainForm;
+
    
-public final class SearchAction extends Action
+public final class AddFountainAction extends Action
 {
   public ActionForward execute(ActionMapping mapping,
      ActionForm form,
@@ -26,10 +27,10 @@ public final class SearchAction extends Action
     
     ArrayList results;
    
-    SearchForm searchForm = (SearchForm) form;
+    AddFountainForm addFountainForm = (AddFountainForm) form;
    
     // Perform employee search based on the criteria entered.
-    String name = searchForm.getFountainName();
+    String name = addFountainForm.getFountainName();
        if (name != null && name.trim().length() > 0) {
       results = fService.searchByfountainName(name);
     } else {
@@ -37,7 +38,7 @@ public final class SearchAction extends Action
     }
    
     // Place search results in SearchForm for access by JSP.
-    searchForm.setResults(results);
+       addFountainForm.setResults(results);
    
        // Forward control to this Action's input page.
     return mapping.getInputForward();

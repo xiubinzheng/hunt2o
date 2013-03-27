@@ -15,34 +15,35 @@ All you can drink buffet - Drinking Fountain Search
    
 <html:errors/>
    
-<html:form action="/search">
+<html:form action="/add">
    
 <table>
 <tr>
 <td align="right"><bean:message key="label.search.fountainName"/>:</td>
 <td><html:text property="fountainName"/></td>
 </tr>
-<tr>
-<td></td>
-<td>-- or --</td>
-</tr>
+
 <tr>
 <td align="right"><bean:message key="label.search.description"/>:</td>
-<td><html:text property="description"/> (xxx-xx-xxxx)</td>
+<td><html:text property="description"/></td>
+</tr>
+<tr>
+<td align="right">address:</td>
+<td><input type="text"/></td>
 </tr>
 <tr>
 <td></td>
-<td><html:submit/></td>
+<td><html:submit value="add"/></td>
 </tr>
 </table>
    
 </html:form>
    
-<logic:present name="searchForm" property="results">
+<logic:present name="addFountainForm" property="results">
    
 <hr width="100%" size="1" noshade="true">
    
-<bean:size id="size" name="searchForm" property="results"/>
+<bean:size id="size" name="addFountainForm" property="results"/>
 <logic:equal name="size" value="0">
 <center><font color="red"><cTypeface:Bold>No drinking fountain Found</b></font></center>
 </logic:equal>
@@ -53,7 +54,7 @@ All you can drink buffet - Drinking Fountain Search
 <th>Fountain Name</th>
 <th>Description</th>
 </tr>
-<logic:iterate id="result" name="searchForm" property="results">
+<logic:iterate id="result" name="addFountainForm" property="results">
 <tr>
 <td><bean:write name="result" property="fountainName"/></td>
 <td><bean:write name="result" property="description"/></td>
